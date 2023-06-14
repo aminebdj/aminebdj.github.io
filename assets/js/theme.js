@@ -44,3 +44,14 @@ function getTheme() {
 function setTheme(value) {
   document.documentElement.setAttribute(THEME_ATTR, value);
 }
+
+$(window).scroll(function() {
+    if ($(this).scrollTop()>250)
+     {
+        $('.container-fluid').hide(1000);
+     }
+    else
+     {
+      $('.container-fluid').show(1000);
+     }
+ });
