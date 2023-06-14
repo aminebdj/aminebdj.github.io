@@ -1,10 +1,6 @@
 ---
 ---
-.container-fluid {
-    margin: auto;
-    width: 70%;
-    padding: 10px;
-  }
+
 .example-header {
     background: #3D4351;
     color: #FFF;
@@ -24,6 +20,9 @@
     }
 }
 .container-fluid {
+    margin: auto;
+    width: 70%;
+    padding: 10px;
     .row {
         padding: 0 0 4em 0;
         &:nth-child(even) {
