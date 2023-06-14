@@ -1,7 +1,7 @@
 ### Site Settings ###
 title               : Mohamed El Amine Boudjoghra
 description         : >-
-                      Welcome to my portfolio, where :coffee: is turned into :code:.
+                      Welcome to my portfolio, where :coffee: is turned into :code: &#128513.
 baseurl             : ""                     # Change to empty quotes if you are hosting your site at <your-username>.github.io directly
 repository          : https://github.com/aminebdj/aminebdj.github.io     # Change to <your-username>/<your-username>.github.io (or remove it if you don't need remote projects)
 remote_theme        : YoussefRaafatNasry/portfolYOU
