@@ -1,5 +1,11 @@
 ---
 ---
+.container-fluid {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+  }
 .example-header {
     background: #3D4351;
     color: #FFF;
