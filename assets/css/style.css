@@ -1,6 +1,5 @@
 ---
 ---
-@import "portfolYOU";
 .example-header {
     background: #3D4351;
     color: #FFF;
@@ -171,3 +170,5 @@
             background: #FF6B6B;
         }
     }
+@import "portfolYOU";
+
