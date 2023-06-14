@@ -31,11 +31,11 @@
 }
 .container-fluid {
     margin: auto;
-    width: 150%;
+    width: 100%;
     padding: 10px;
     .row {
         padding: 0 0 4em 0;
-        width: 150%;
+        width: 100%;
         &:nth-child(even) {
             background: #F1F4F5;
         }
@@ -133,7 +133,7 @@
 
 .timeline-content {
     padding-bottom: 40px;
-    width: 100%;
+    width: 150%;
     p:last-child {
         margin-bottom: 0;
     }
