@@ -4,7 +4,7 @@ const QUERY_KEY   = "(prefers-color-scheme: dark)";
 
 const themes = {
   LIGHT: "light",
-  DARK: "darkblue",
+  DARK: "dark",
 };
 
 initTheme();
