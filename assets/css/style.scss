@@ -31,11 +31,11 @@
 }
 .container-fluid {
     margin: auto;
-    width: 100%;
+    width: 150%;
     padding: 10px;
     .row {
         padding: 0 0 4em 0;
-        width: 100%;
+        width: 150%;
         &:nth-child(even) {
             background: #F1F4F5;
         }
