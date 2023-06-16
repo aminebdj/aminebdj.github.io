@@ -16,25 +16,30 @@
           </h5>
           <p id="{{ project_id }}-desc" class="card-text">{{ project_desc }}</p>
           <p id="{{ project_id }}-tools" class="card-text">
-            <a class="btn" href="https://ywyue.github.io/AGILE3D/">
+            {%- for tool in project_tools -%}
+            <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
+            {%- endfor -%}
+          </p>
+          <p id="{{ project_id }}-tools" class="card-text">
+            <a class="badge badge-pill text-primary border border-primary ml-1" href="https://ywyue.github.io/AGILE3D/">
               <span class="icon">
                 <i class="fas fa-bolt"></i>
               </span>
               <span>Project Page</span>
             </a>
-            <a class="btn" href="https://arxiv.org/abs/2306.00977">
+            <a class="badge badge-pill text-primary border border-primary ml-1" href="https://arxiv.org/abs/2306.00977">
               <span class="icon">
                 <i class="fas fa-file-pdf"></i>
               </span>
               <span>Paper</span>
             </a>
-            <a class="btn">
+            <a class="badge badge-pill text-primary border border-primary ml-1">
               <span class="icon">
                 <i class="fas fa-book"></i>
               </span>
               <span>BibTex</span>
             </a>
-            <a class="btn" href="https://github.com/ywyue/AGILE3D">
+            <a class="badge badge-pill text-primary border border-primary ml-1" href="https://github.com/ywyue/AGILE3D">
               <span class="icon">
                 <i class="fab fa-github"></i>
               </span>
