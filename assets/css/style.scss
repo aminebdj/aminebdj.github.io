@@ -15,6 +15,13 @@
 	display: inline-block;
     border-radius: 5%;
 }
+.tags{
+    float: left;
+    display: inline-block;
+	position: relative;
+	overflow: hidden;
+	display: inline-block;
+}
 .custom_card{
     width: 300%;
 }
