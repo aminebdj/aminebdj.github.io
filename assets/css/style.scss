@@ -16,14 +16,12 @@
     border-radius: 5%;
 }
 .tags{
-    float: left;
-    display: inline-block;
-	position: relative;
-	overflow: hidden;
-	display: inline-block;
+    bottom:0;
+    left:0;
 }
 .custom_card{
     width: 300%;
+    position: relative;
 }
 .body {
     background: #d5e2ff;
