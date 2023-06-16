@@ -1,9 +1,11 @@
 <div class='custom_card'>
   <div class="wow animated fadeIn" data-wow-delay=".15s">
     <a href="{{ project_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%}>
-      {%- if project_img -%}
-      <img id="{{ project_id }}-img" class="card-img-left" src="{{ project_img }}" alt="{{ project_name }}" />
-      {%- endif -%}
+      <div class="img_container">
+        {%- if project_img -%}
+        <img id="{{ project_id }}-img" class="card-img-left" src="{{ project_img }}" alt="{{ project_name }}" />
+        {%- endif -%}
+      </div>
       <div class="card-body_c">
         <div class="card-body">
           <h5 id="{{ project_id }}-name" class="card-title">
