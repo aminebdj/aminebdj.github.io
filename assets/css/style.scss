@@ -6,7 +6,13 @@
     border-color: #E4EAEC;
 }
 .card-img-left{
+    float: left;
+    display: inline-block;
+	position: relative;
+	overflow: hidden;
+	height: 100%;
 	width: 25%;
+	display: inline-block;
 }
 .custom_card{
     width: 200%;
