@@ -7,11 +7,31 @@
       {%- endif -%}
 
       <div class="card-body_c">
+        <a class="btnn" href="https://ywyue.github.io/AGILE3D/">
+          <span class="icon" style="margin-left: 0em;position: relative;">
+            <i class="fas fa-bolt"></i>
+          </span>
+          <span>Project Page</span>
+        </a>
+        <a class="btnn" href="https://arxiv.org/abs/2306.00977">
+          <span class="icon" style="margin-left: 0em;position: relative;">
+            <i class="fas fa-file-pdf"></i>
+          </span>
+          <span>Paper</span>
+        </a>
+        <a class="btnn collapsible" id="collapse_agile3d">
+          <span class="icon" style="margin-left: 0em;position: relative;">
+            <i class="fas fa-book"></i>
+          </span>
+          <span>BibTex</span>
+        </a>
+        <a class="btnn" href="https://github.com/ywyue/AGILE3D">
+          <span class="icon" style="margin-left: 0em;position: relative;">
+            <i class="fab fa-github"></i>
+          </span>
+          <span>Code</span>
+        </a>
         <div class="card-body">
-          <div class="tags">
-            <span>amine</span>
-            <span>amine</span>
-          </div>
           <h5 id="{{ project_id }}-name" class="card-title">
               {%- if project_type == "remote" -%}
               <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
