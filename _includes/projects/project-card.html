@@ -10,48 +10,48 @@
 
       <div class="card-body_c">
         <div class="card-body">
-          <div class="card-title_c">
-            <h5 id="{{ project_id }}-name" class="card-title">
-              {%- if project_type == "remote" -%}
-              <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
-              {%- endif -%}
-            {{ project_name }}
+
+          <h5 id="{{ project_id }}-name" class="card-title">
+            {%- if project_type == "remote" -%}
+            <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+            {%- endif -%}
+          {{ project_name }}
           </h5>
-          </div>
-          <div class="card-text_c">
-            <p id="{{ project_id }}-desc" class="card-text">{{ project_desc }}</p>
-            <p id="{{ project_id }}-tools" class="card-text">
-              {%- for tool in project_tools -%}
-              <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
-              {%- endfor -%}
-            </p>
-            <p id="{{ project_id }}-tools" class="card-text">
-              <span class="btn" onclick="window.location.href='www.google.com';">
-                <span class="icon">
-                  <i class="fas fa-bolt"></i>
-                </span>
-                <span>Project Page</span>
+
+          
+          <p id="{{ project_id }}-desc" class="card-text">{{ project_desc }}</p>
+          <p id="{{ project_id }}-tools" class="card-text">
+            {%- for tool in project_tools -%}
+            <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
+            {%- endfor -%}
+          </p>
+          <p id="{{ project_id }}-tools" class="card-text">
+            <span class="btn" onclick="window.location.href='www.google.com';">
+              <span class="icon">
+                <i class="fas fa-bolt"></i>
               </span>
-              <span class="btn" onclick="window.location.href='www.google.com';"">
-                <span>
-                  <i class="fas fa-file-pdf"></i>
-                </span>
-                <span>Paper</span>
+              <span>Project Page</span>
+            </span>
+            <span class="btn" onclick="window.location.href='www.google.com';"">
+              <span>
+                <i class="fas fa-file-pdf"></i>
               </span>
-              <span class="btn">
-                <span>
-                  <i class="fas fa-book"></i>
-                </span>
-                <span>BibTex</span>
+              <span>Paper</span>
+            </span>
+            <span class="btn">
+              <span>
+                <i class="fas fa-book"></i>
               </span>
-              <span class="btn">
-                <span>
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
+              <span>BibTex</span>
+            </span>
+            <span class="btn">
+              <span>
+                <i class="fab fa-github"></i>
               </span>
-            </p>
-          </div>
+              <span>Code</span>
+            </span>
+          </p>
+
 <!-- <div class="tags">
   <a class="btn" href="https://ywyue.github.io/AGILE3D/">
     <span class="icon">
