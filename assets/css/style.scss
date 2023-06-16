@@ -7,11 +7,11 @@
     margin-left: 50px;
 }
 .card-text{
-    width:800px;
+    width:750px;
     margin-left: 200px;
 }
 .card-title{
-    width:800px;
+    width:750px;
     margin-left: 200px;
 }
 .card-img-left{
@@ -26,7 +26,11 @@
 .custom_card{
     width: 300%;
 }
-
+.tags{
+    bottom: 0;
+    left: 0;
+    position: relative;
+}
 .body {
     background: #d5e2ff;
 }
