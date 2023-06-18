@@ -1,94 +1,94 @@
 <div class='custom_card'>
   <div class="wow animated fadeIn" data-wow-delay=".15s">
     <a href="{{ publication_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%}>
-      <div class="card-body_c">
-        <div class="card-body">
-          <h5 id="{{ publication_id }}-name" class="card-title">
-            {%- if publication_type == "remote" -%}
-            <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
-            {%- endif -%}
-          {{ publication_name }}
-          </h5>
+      
+      <img id="{{ publication_id }}-img" class="card-img-left_publication" src="{{ publication_img }}" alt="{{ publication_name }}" >
+        <div class="card-body_c">
+          <div class="card-body">
+            <h5 id="{{ publication_id }}-name" class="card-title">
+              {%- if publication_type == "remote" -%}
+              <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+              {%- endif -%}
+            {{ publication_name }}
+            </h5>
 
-          
-          <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
-          <p id="{{ publication_id }}-tools" class="card-text">
-            {%- for tool in publication_tools -%}
-            <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
-            {%- endfor -%}
-          </p>
-          <div id="{{ publication_id }}-tools" class="tags card-text">
-            <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
-              <span class="icon">
-                <i class="fas fa-bolt"></i>
+            
+            <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
+            <p id="{{ publication_id }}-tools" class="card-text">
+              {%- for tool in publication_tools -%}
+              <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
+              {%- endfor -%}
+            </p>
+            <div id="{{ publication_id }}-tools" class="tags card-text">
+              <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
+                <span class="icon">
+                  <i class="fas fa-bolt"></i>
+                </span>
+                <span>publication Page</span>
               </span>
-              <span>publication Page</span>
-            </span>
-            <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
-              <span>
-                <i class="fas fa-file-pdf"></i>
+              <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
+                <span>
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
               </span>
-              <span>Paper</span>
-            </span>
-            <span class="btn">
-              <span>
-                <i class="fas fa-book"></i>
+              <span class="btn">
+                <span>
+                  <i class="fas fa-book"></i>
+                </span>
+                <span>BibTex</span>
               </span>
-              <span>BibTex</span>
-            </span>
-            <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
-              <span>
-                <i class="fab fa-github"></i>
+              <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
+                <span>
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
               </span>
-              <span>Code</span>
-            </span>
+            </div>
+
+  <!-- <div class="tags">
+    <a class="btn" href="https://ywyue.github.io/AGILE3D/">
+      <span class="icon">
+        <i class="fas fa-bolt"></i>
+      </span>
+      <span>publication Page</span>
+    </a>
+    <a class="btn" href="https://arxiv.org/abs/2306.00977">
+      <span class="icon">
+        <i class="fas fa-file-pdf"></i>
+      </span>
+      <span>Paper</span>
+    </a>
+    <a class="btn">
+      <span class="icon">
+        <i class="fas fa-book"></i>
+      </span>
+      <span>BibTex</span>
+    </a>
+    <a class="btn" href="https://github.com/ywyue/AGILE3D">
+      <span class="icon">
+        <i class="fab fa-github"></i>
+      </span>
+      <span>Code</span>
+    </a>
+  </div> -->
+            <!-- <div id="content_agile3d" class="collapsible-content">
+              <pre class="p-bibtex">
+              {% raw %}
+              @article{yue2023agile3d,
+                title     = {{AGILE3D: Attention Guided Interactive Multi-object 3D Segmentation}},
+                author    = {Yue, Yuanwen and Mahadevan, Sabarinath and Schult, Jonas and Engelmann, Francis and Leibe, Bastian and Schindler, Konrad and Kontogianni, Theodora},
+                booktitle = {arXiv preprint arXiv:2306.00977},
+                year      = {2023}
+              }
+              {% endraw %}
+              </pre>
+            </div> -->
           </div>
 
-<!-- <div class="tags">
-  <a class="btn" href="https://ywyue.github.io/AGILE3D/">
-    <span class="icon">
-      <i class="fas fa-bolt"></i>
-    </span>
-    <span>publication Page</span>
-  </a>
-  <a class="btn" href="https://arxiv.org/abs/2306.00977">
-    <span class="icon">
-      <i class="fas fa-file-pdf"></i>
-    </span>
-    <span>Paper</span>
-  </a>
-  <a class="btn">
-    <span class="icon">
-      <i class="fas fa-book"></i>
-    </span>
-    <span>BibTex</span>
-  </a>
-  <a class="btn" href="https://github.com/ywyue/AGILE3D">
-    <span class="icon">
-      <i class="fab fa-github"></i>
-    </span>
-    <span>Code</span>
-  </a>
-</div> -->
-          <!-- <div id="content_agile3d" class="collapsible-content">
-            <pre class="p-bibtex">
-            {% raw %}
-            @article{yue2023agile3d,
-              title     = {{AGILE3D: Attention Guided Interactive Multi-object 3D Segmentation}},
-              author    = {Yue, Yuanwen and Mahadevan, Sabarinath and Schult, Jonas and Engelmann, Francis and Leibe, Bastian and Schindler, Konrad and Kontogianni, Theodora},
-              booktitle = {arXiv preprint arXiv:2306.00977},
-              year      = {2023}
-            }
-            {% endraw %}
-            </pre>
-          </div> -->
+          
         </div>
-
-        
-      </div>
-      {%- if publication_img -%}
-      <img id="{{ publication_id }}-img" class="card-img-left_publication" src="{{ publication_img }}" alt="{{ publication_name }}" />
-      {%- endif -%}
+      </img>
     </a>
   </div>
 </div>
