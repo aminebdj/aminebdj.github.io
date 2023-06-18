@@ -10,6 +10,7 @@
             <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
             {%- endif -%}
           {{ project_name }}
+                 
           {%- for tool in project_tools -%}
           <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
           {%- endfor -%}
@@ -35,7 +36,9 @@
               <span>Code</span>
             </span>
           </div>
-          
+          <div id="{{ project_id }}-tools" class="tags card-text">
+            
+          </div>
         </div>
 
         

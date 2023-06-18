@@ -1,6 +1,6 @@
 ---
-name: PlaceHolder Project
-tools: [2022]
+name: PlaceHolder Project    
+tools: [CVPR2022 ]
 image: 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aa.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aa
 external_url: 'https://www.google.com'
