@@ -1,11 +1,11 @@
 <div class='custom_card'>
-  <!-- {%- if publication_img -%}
+  {%- if publication_img -%}
   <img id="{{ publication_id }}-img" class="card-img-left_publication" src="{{ publication_img }}" alt="{{ publication_name }}" />
-  {%- endif -%} -->
+  {%- endif -%}
   <div class="wow animated fadeIn" data-wow-delay=".15s">
     <a href="{{ publication_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%}>
       <div class="card-body_c">
-        <div class="card-body" style="background-image: '{{ publication_img }}';">
+        <div class="card-body">
           <h5 id="{{ publication_id }}-name" class="card-title">
             {%- if publication_type == "remote" -%}
             <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
