@@ -1,7 +1,7 @@
 ---
 name: PlaceHolder Project
-tools: []
-image: https://www.sketchappsources.com/resources/source-image/project-neon-groove-music-ui.png
+tools: [2022]
+image: 
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aa.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua aa
 external_url: 'https://www.google.com'
 code: 'https://www.google.com'
