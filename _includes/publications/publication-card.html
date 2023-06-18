@@ -1,32 +1,32 @@
 <div class='custom_card'>
   <div class="wow animated fadeIn" data-wow-delay=".15s">
-    <a href="{{ project_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%} style="background-image: url('{{ project_img }}');">
+    <a href="{{ publication_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%} style="background-image: url('{{ publication_img }}');">
       
-      <!-- <img id="{{ project_id }}-img" class="card-img-left_project" src="{{ project_img }}" alt="{{ project_name }}" > -->
+      <!-- <img id="{{ publication_id }}-img" class="card-img-left_publication" src="{{ publication_img }}" alt="{{ publication_name }}" > -->
       <div class="card-body_c">
         <div class="card-body">
-          <h5 id="{{ project_id }}-name" class="card-title">
-            {%- if project_type == "remote" -%}
+          <h5 id="{{ publication_id }}-name" class="card-title">
+            {%- if publication_type == "remote" -%}
             <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
             {%- endif -%}
-          {{ project_name }}
+          {{ publication_name }}
           </h5>
 
           
-          <p id="{{ project_id }}-desc" class="card-text">{{ project_desc }}</p>
-          <p id="{{ project_id }}-tools" class="card-text">
-            {%- for tool in project_tools -%}
+          <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
+          <p id="{{ publication_id }}-tools" class="card-text">
+            {%- for tool in publication_tools -%}
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
             {%- endfor -%}
           </p>
-          <div id="{{ project_id }}-tools" class="tags card-text">
-            <!-- <span class="btn" onclick="window.location.href='{{ project_webpage }}';">
+          <div id="{{ publication_id }}-tools" class="tags card-text">
+            <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
               <span class="icon">
                 <i class="fas fa-bolt"></i>
               </span>
-              <span>project Page</span>
-            </span> -->
-            <span class="btn" onclick="window.location.href='{{ project_paper }}';">
+              <span>publication Page</span>
+            </span>
+            <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
               <span>
                 <i class="fas fa-file-pdf"></i>
               </span>
@@ -38,14 +38,13 @@
               </span>
               <span>BibTex</span>
             </span>
-            <span class="btn"  onclick="window.location.href='{{ project_github }}';"> 
+            <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
               <span>
                 <i class="fab fa-github"></i>
               </span>
               <span>Code</span>
             </span>
           </div>
-
         </div>
 
         
