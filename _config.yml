@@ -18,7 +18,6 @@ nav_exclude:                                            # The following paths ar
   - pages/tags.html
   - pages/404.html
   - pages/index.md
-  - pages/publications/3D-OWIS.html
 
 
 ### Author Info ###
