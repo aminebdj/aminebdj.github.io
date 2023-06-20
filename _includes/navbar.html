@@ -10,7 +10,6 @@
     <div class="navbar-nav ml-auto">
 
       {%- assign html_pages = site.html_pages | sort: 'weight' -%}
-      {%- assign html_pages_ext = site.html_pages.publications | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
       {%- for html_page in html_pages -%} 
@@ -18,20 +17,6 @@
         {%- assign exclude = false -%}
 
         {%- for exclude_path in site.nav_exclude -%}
-
-          {%- if exclude_path == html_page.path -%}
-            {%- assign exclude = true -%}
-            {%- break -%}
-          {%- elsif exclude_path contains '**' -%}
-            {%- assign match = exclude_path | remove: '**' -%}
-            {%- if html_page.path contains match -%}
-              {%- assign exclude = true -%}
-              {%- break -%}
-            {%- endif -%}
-          {%- endif -%}
-
-        {%- endfor -%}
-        {%- for exclude_path in html_pages_ext -%}
 
           {%- if exclude_path == html_page.path -%}
             {%- assign exclude = true -%}
