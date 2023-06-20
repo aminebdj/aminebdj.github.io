@@ -9,7 +9,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
 
-      {%- assign html_pages = site.html_pages | sort: 'weight' -%}
+      <!-- {%- assign html_pages = site.html_pages | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
       {%- for html_page in html_pages -%} 
@@ -49,11 +49,13 @@
           {%- assign url = html_page.external_url -%}
         {%- else -%}
           {%- assign url = html_page.url | relative_url -%}
-        {%- endif -%}
+        {%- endif -%} -->
 
-        <a class="nav-item nav-link {{ active_status }}" href="{{ url }}" {%- if html_page.external_url and site.open_new_tab -%} target="_blank" {%- endif -%}>{{ html_page.title }}</a>
+      <a class="nav-item nav-link active" href="https://aminebdj.github.io/publications">Publications</a>
+      <a class="nav-item nav-link active" href="https://aminebdj.github.io/projects">Projects</a>
+      <a class="nav-item nav-link active" href="https://aminebdj.github.io/about">About</a>
 
-      {% endfor %}
+      <!-- {% endfor %} -->
 
       <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()"></span>
     </div>
