@@ -9,10 +9,10 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
 
-      {%- assign html_pages = site.html_pages | sort: 'weight' -%}
+      {%- assign html_pages = site.nav_include | sort: 'weight' -%}
       {%- assign filtered_pages = "" | split: "" -%}
 
-      {%- for html_page in html_pages -%} 
+      {%- for html_page in site.nav_include -%} 
 
         {%- assign exclude = false -%}
 

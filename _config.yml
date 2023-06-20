@@ -20,6 +20,11 @@ nav_exclude:                                            # The following paths ar
   - pages/index.md
   - pages/blog.html
 
+nav_include:
+  - pages/projects.html
+  - pages/publications.html
+  - pages/about.html
+
 
 ### Author Info ###
 author:
