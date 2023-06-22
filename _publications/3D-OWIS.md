@@ -1,11 +1,11 @@
 ---
-name: PlaceHolder Project
-tools: [CVPR2023]
+name: 3D Indoor Instance Segmentation in an Open-World
+tools: []
 image: ../images/publications/3D-OWIS/pub_img.gif
-description: 
+description: Mohamed El Amine Boudjoghra, Salwa K. Al Khatib, Jean Lahoud, Hisham Cholakkal1, Rao Muhammad Anwer, Salman Khan, Fahad Khan, arXiv, 2023.
 external_url: 3d_owis
-code: 'https://www.google.com'
-paper: 'https://www.google.com'
+code: 'https://github.com/aminebdj/3D-OWIS'
+paper: ''
 bibtex: 'aaa'
-webpage: 'https://www.google.com'
+webpage: 'https://aminebdj.github.io/publications/3d_owis'
 ---
