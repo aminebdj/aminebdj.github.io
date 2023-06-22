@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 3D_OWIS
+title: 3D-OWIS
 permalink: /publications/3d_owis
 weight: 1
 remote_projects: 
@@ -8,15 +8,27 @@ remote_projects:
   - arduino-visitor-counter
 ---
 
+<div style="display: flex; align-items: center; justify-content: center; width: 80%; border: 1px solid red;"><h6 style="border:1px solid blue;">3D-OWIS: 3D Indoor Instance Segmentation in an Open-World</h6></div>
 
+<div align="center">
+  <a href="">Mohamed El Amine Boudjoghra</a><sup>1</sup>, <a href="">Salwa K. Al Khatib</a><sup>1</sup>, <a href=""> Jean Lahoud</a><sup>1</sup>, <a href="">Hisham Cholakkal</a><sup>1</sup>, <a href="">Rao Muhammad Anwer</a><sup>1,2</sup>,  <a href="">Salman Khan</a><sup>1,3</sup>, <a href="">Fahad Khan</a><sup>1,4</sup>
+  
+  <sup>1</sup>Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI) <sup>2</sup>Aalto University <sup>3</sup>Australian National University <sup>4</sup>Linköping University
+  </div>
+  
+<h5>
+  Abstract
+</h5>
+<p>
+  We formulate the problem of 3D point cloud instance segmentation in the open world, where we relax the assumption of a closed setting of classes during the training. We propose an auto-labeling scheme to produce pseudo-labels during training and induce separation to separate known and unknown category labels. We further improve the pseudo-labels quality at inference by adjusting the unknown class probability based on the objectness score distribution. We also introduce carefully curated open-world splits leveraging realistic scenarios based on inherent object distribution, region-based indoor scene exploration and randomness aspect of open-world classes. Extensive experiments reveal the efficacy of the proposed contributions leading to promising open-world 3D instance segmentation performance.
+</p>
 
 <div>
-
   <iframe
   width="500" height="500" style="border:1px solid #eeeeee;"
   src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene0015_00-3d_owis.ply">
   </iframe>
-  <iframe
+<iframe
   width="500" height="500" style="border:1px solid #eeeeee;"
   src="https://3dviewer.net/">
   </iframe>
