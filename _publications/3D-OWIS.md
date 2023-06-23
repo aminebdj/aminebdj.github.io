@@ -6,7 +6,6 @@ description: Mohamed El Amine Boudjoghra, Salwa K. Al Khatib, Jean Lahoud, Hisha
 external_url: 3d_owis
 code: 'https://github.com/aminebdj/3D-OWIS'
 paper: ''
-id: 1
 bibtex: '
             @article{yue2023agile3d,
                 title     = {{}},

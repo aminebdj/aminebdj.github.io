@@ -26,7 +26,7 @@
               <span>Paper</span>
             </span>
 
-            <span class="btn collapsible" id="collapse{{publication_id}}">
+            <span class="btn collapsible" id="collapse{{ publication_id }}">
               <span>
                 <i class="fas fa-book"></i>
               </span>
@@ -41,7 +41,7 @@
             {%- for tool in publication_tools -%}
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
             {%- endfor -%}
-            <div id="content{{publication_id}}" class="collapsible-content">
+            <div id="content{{ publication_id }}" class="collapsible-content">
               <pre class="p-bibtex">  
               {%raw%}
               '{{ publication_bibtex }}'
