@@ -1,0 +1,31 @@
+
+<div class="card-rows m-3 mt-5">
+
+    <!-- Local publications -->
+    {% for publication in site.publications %}
+  
+      {%- assign publication_type  = "local" -%}
+      {%- assign publication_id    = publication.id -%}
+      {%- assign publication_img   = publication.image -%}
+      {%- assign publication_name  = publication.name -%}
+      {%- assign publication_desc  = publication.description -%}
+      {%- assign publication_tools = publication.tools -%}
+      {%- assign publication_github = publication.code -%}
+      {%- assign publication_bibtex = publication.bibtex -%}
+      {%- assign publication_paper = publication.paper -%}
+      {%- assign publication_webpage = publication.webpage -%}
+      {%- assign publication_id = publication.id -%}
+      
+      {%- if publication.external_url -%}
+        {%- assign publication_url = publication.external_url -%}
+        {%- assign external    = true -%}
+      {%- else -%}
+        {%- assign publication_url = publication.url | relative_url -%}
+        {%- assign external    = false -%}
+      {%- endif -%}
+  
+      {% include publications/publication-card.html %}
+  
+    {% endfor %}
+  
+  </div>

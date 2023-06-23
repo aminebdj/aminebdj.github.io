@@ -1,0 +1,71 @@
+<div class='custom_card'>
+  <div class="wow animated fadeIn" data-wow-delay=".15s">
+    <div class="project card text-themed" style="background-image: url('{{ publication_img }}');">
+      
+      <!-- <img id="{{ publication_id }}-img" class="card-img-left_publication" src="{{ publication_img }}" alt="{{ publication_name }}" > -->
+      <div class="card-body_c">
+        <div class="card-body">
+          <h5 id="{{ publication_id }}-name" class="card-title" style="margin-right: 20px">
+            {%- if publication_type == "remote" -%}
+            <i class="fab fa-github" data-toggle="tooltip" data-placement="bottom" data-delay="250" title="GitHub Repository"></i> |&nbsp;
+            {%- endif -%}
+          {{ publication_name }}
+          </h5>
+          <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
+          <div id="{{ publication_id }}-tools" class="tags card-text">
+            <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
+              <span class="icon">
+                <i class="fas fa-bolt"></i>
+              </span>
+              <span>publication Page</span>
+            </span>
+            <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
+              <span>
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </span>
+
+            <span class="btn collapsible" id="collapse{{publication_id}}">
+              <span>
+                <i class="fas fa-book"></i>
+              </span>
+              <span>BibTex</span>
+            </span>
+            <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
+              <span style="color: #777;">
+                <i class="fab fa-github"></i>
+              </span>
+              <span style="color: #777;">Code</span>
+            </span>
+            {%- for tool in publication_tools -%}
+            <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
+            {%- endfor -%}
+            <div id="content{{publication_id}}" class="collapsible-content">
+              <pre class="p-bibtex">  
+              {%include bibtex/{{ publication_id }}_bibtex.html%}
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- </img> -->
+    </div>
+  </div>
+</div>
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      id = this.id;
+      var content = document.getElementById(id.replace("collapse", "content"));
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  }
+</script>
