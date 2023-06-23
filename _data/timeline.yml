@@ -1,9 +1,9 @@
-- title: Master's in control systems and automation 
+- title: M.S.c in computer vision
+  from: 2012
+  to: present
+  description: I am conducting research on 3D scene understanding in an open world setting.
+
+- title: Engineering in control systems and automation 
   from: 2017
   to: 2022
-  description: 
-
-- title: M.S.c in computer vision
-  from: 2018
-  to: present
-  description: 
+  description: My final project was on V-SLAM with Lie Groups, where we explored a new approach of map and pose estimation from sparse point cloud landmarks and the robots relative velocity. 
