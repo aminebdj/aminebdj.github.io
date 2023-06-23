@@ -33,7 +33,7 @@
                 <span>BibTex</span>
               </span>
             </div>
-            
+
             <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
               <span style="color: #777;">
                 <i class="fab fa-github"></i>
@@ -44,23 +44,23 @@
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
             {%- endfor -%}
           </div>
+          <div id="content1" class="collapsible-content">
+            <pre class="p-bibtex">
+            {% raw %}
+            @article{yue2023agile3d,
+              title     = {{AGILE3D: Attention Guided Interactive Multi-object 3D Segmentation}},
+              author    = {Yue, Yuanwen and Mahadevan, Sabarinath and Schult, Jonas and Engelmann, Francis and Leibe, Bastian and Schindler, Konrad and Kontogianni, Theodora},
+              booktitle = {arXiv preprint arXiv:2306.00977},
+              year      = {2023}
+            }
+            {% endraw %}
+                </pre>
+              </div>
         </div>
       </div>
       <!-- </img> -->
     </div>
   </div>
-  <div id="content1" class="collapsible-content">
-    <pre class="p-bibtex">
-    {% raw %}
-    @article{yue2023agile3d,
-      title     = {{AGILE3D: Attention Guided Interactive Multi-object 3D Segmentation}},
-      author    = {Yue, Yuanwen and Mahadevan, Sabarinath and Schult, Jonas and Engelmann, Francis and Leibe, Bastian and Schindler, Konrad and Kontogianni, Theodora},
-      booktitle = {arXiv preprint arXiv:2306.00977},
-      year      = {2023}
-    }
-    {% endraw %}
-        </pre>
-      </div>
 </div>
 <script>
   var coll = document.getElementsByClassName("collapsible");
