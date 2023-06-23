@@ -43,7 +43,9 @@
             {%- endfor -%}
             <div id="content{{publication_id}}" class="collapsible-content">
               <pre class="p-bibtex">  
-              {{ publication_bibtex }}
+              {%raw%}
+              '{{ publication_bibtex }}'
+              {%endraw%}
               </pre>
             </div>
           </div>

@@ -7,14 +7,13 @@ external_url: 3d_owis
 code: 'https://github.com/aminebdj/3D-OWIS'
 paper: ''
 id: 0
-bibtex: '   {%raw%}
+bibtex: '
             @article{yue2023agile3d,
                 title     = {{}},
                 author    = {},
                 booktitle = {},
                 year      = {}
               }
-            {%endraw%}
             '
             
 webpage: 'https://aminebdj.github.io/publications/3d_owis'
