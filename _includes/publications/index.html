@@ -5,7 +5,8 @@
     {% for publication in site.publications %}
   
       {%- assign publication_type  = "local" -%}
-      {%- assign publication_id    = publication.id -%}
+      {%- assign publication_id    = publication.name | slugify -%}
+      {%- assign publication_ids    = publication.id -%}
       {%- assign publication_img   = publication.image -%}
       {%- assign publication_name  = publication.name -%}
       {%- assign publication_desc  = publication.description -%}
