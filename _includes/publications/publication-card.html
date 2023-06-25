@@ -41,8 +41,8 @@
             {%- for tool in publication_tools -%}
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
             {%- endfor -%}
-            <div id="content{{publication_id}}" class="collapsible-content">
-              {% include bibtex/{{ publication_id }}_bibtex.html %}
+            <div id="content{{publication_ids}}" class="collapsible-content">
+              {% include bibtex/{{ publication_ids }}_bibtex.html %}
             </div>
           </div>
         </div>
