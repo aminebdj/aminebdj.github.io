@@ -1,6 +1,6 @@
 <div class='custom_card'>
   <div class="wow animated fadeIn" data-wow-delay=".15s">
-    <a href="{{ project_url }}" class="project card text-themed" {%- if external and site.open_new_tab -%} target="_blank" {%- endif -%} style="background-image: url('{{ project_img }}');">
+    <div class="project card text-themed">
       
       <!-- <img id="{{ project_id }}-img" class="card-img-left_project" src="{{ project_img }}" alt="{{ project_name }}" > -->
       <div class="card-body_c">
@@ -18,13 +18,7 @@
               <span>
                 <i class="fas fa-file-pdf"></i>
               </span>
-              <span>Paper</span>
-            </span>
-            <span class="btn">
-              <span>
-                <i class="fas fa-book"></i>
-              </span>
-              <span>BibTex</span>
+              <span>Technical report</span>
             </span>
             <span class="btn"  onclick="window.location.href='{{ project_github }}';"> 
               <span>
@@ -44,6 +38,6 @@
         
       </div>
       <!-- </img> -->
-    </a>
+    </div>
   </div>
 </div>
