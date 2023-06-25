@@ -1,7 +1,7 @@
 ---
 name: V-SLAM on Lie groups    
 tools: []
-image: '../images/v-slam.png'
+image: ../images/v-slam.png
 description: 'This work focuses on leveraging the potential of Lie theory in state estimation to derive
 a nonlinear approach for solving the Simultaneous Localization And Mapping problem.
 As a matter of fact, the groups SE(3) and SO(3) have proven to be very convenient
