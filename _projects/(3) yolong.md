@@ -1,7 +1,7 @@
 ---
 name: 'YOLOngv8: From Imbalanced to Accurate Object Detection in Long Tailed
 iSAID Dataset'
-tools: []
+tools: [Object-Detection Long-tail-dataset]
 image: ../images/projects/
 description: 'Object detection in aerial images poses unique chal-
 lenges unlike in regular detection settings. The iSAID
