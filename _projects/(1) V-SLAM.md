@@ -1,6 +1,6 @@
 ---
 name: V-SLAM on Lie groups    
-tools: [Lie-theory Lyapunov-stability-analysis]
+tools: [Lie theory, Lyapunov stability analysis]
 image: ../images/projects/v-slam.png
 description: 'This work focuses on leveraging the potential of Lie theory in state estimation to derive
 a nonlinear approach for solving the Simultaneous Localization And Mapping problem.

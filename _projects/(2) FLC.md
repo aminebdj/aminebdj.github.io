@@ -1,6 +1,6 @@
 ---
 name: Robust Model poisoning attack to fake clients defense 
-tools: [Federated-learning Model-attack]
+tools: [Federated learning, Model attack]
 image: ../images/projects/
 description: 'We explore the attack surface of federated learning (FL) and focus on model-
 poisoning attacks using fake clients. We propose a novel attack strategy that
