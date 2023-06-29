@@ -2,7 +2,7 @@
 name: 'Drawing Attention to Detail: Pose Alignment through Self-Attention for
 Fine-Grained Object Classification'
 tools: [Fine grained classification]
-image: ../images/projects/
+image: ../images/projects/Dawing-attention.png
 description: 'One recent study [4] shows the importance of local parts
 localization and parts alignment in enhancing the robust-
 ness against pose variation, and improving the generaliz-

@@ -1,7 +1,7 @@
 ---
 name: 'DeepLabV3+ and SegFormer robustness analysis'
 tools: []
-image: ../images/projects/
+image: ../images/projects/deeplabv3-vs-segformer.png
 description: 'In this project, we conducted a comparative analysis of
 Segformer, a ViT-based semantic segmentation model, and
 DeeplabV3+, a CNN-based semantic segmentation model,

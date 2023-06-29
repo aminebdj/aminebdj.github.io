@@ -1,7 +1,7 @@
 ---
 name: 'Human Pose Estimation'
 tools: []
-image: ../images/projects/
+image: ../images/projects/hpe.png
 description: 'Human Pose Estimation (HPE) seeks to find human
 body components and construct human body representations (e.g., skeletons) from input data such as photographs
 and videos. It has gained popularity over the last decade
