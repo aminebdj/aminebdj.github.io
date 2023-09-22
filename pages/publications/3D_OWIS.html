@@ -1,0 +1,231 @@
+---
+layout: default
+title: 3D-OWIS
+permalink: /publications/3d_owis
+weight: 1
+remote_projects: 
+  - git-for-wizards
+  - arduino-visitor-counter
+---
+<br>
+<br>
+<br>
+<br>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%;"><h1>3D-OWIS: 3D Indoor Instance Segmentation in an Open-World</h1></div>
+<br>
+<br>
+<br>
+<br>
+<div align="center">
+  <a href=""><img style="width: 150px;" src="https://img.shields.io/badge/arXiv-Paper-green.svg"></a>
+  <a href=""><img style="width: 150px;" src="https://img.shields.io/badge/GitHub-Code-red.svg"></a>
+</div>
+<br>
+<br>
+
+
+<div align="center">
+  <a href="">Mohamed El Amine Boudjoghra</a><sup>1</sup>, <a href="">Salwa K. Al Khatib</a><sup>1</sup>, <a href=""> Jean Lahoud</a><sup>1</sup>, <a href="">Hisham Cholakkal</a><sup>1</sup>, <a href="">Rao Muhammad Anwer</a><sup>1,2</sup>,  <a href="">Salman Khan</a><sup>1,3</sup>, <a href="">Fahad Khan</a><sup>1,4</sup>
+  <br>
+  <sup>1</sup>Mohamed Bin Zayed University of Artificial Intelligence (MBZUAI) <sup>2</sup>Aalto University <sup>3</sup>Australian National University <sup>4</sup>Linköping University
+  </div>
+<br>
+<br>
+<br>
+<div align="center">
+<img src="../../images/problem_setting.png" style="width: 100%;">
+</div>
+<br>
+<br>
+<h2>
+  Abstract
+</h2>
+<br>
+<p>
+  We formulate the problem of 3D point cloud instance segmentation in the open world, where we relax the assumption of a closed setting of classes during the training. We propose an auto-labeling scheme to produce pseudo-labels during training and induce separation to separate known and unknown category labels. We further improve the pseudo-labels quality at inference by adjusting the unknown class probability based on the objectness score distribution. We also introduce carefully curated open-world splits leveraging realistic scenarios based on inherent object distribution, region-based indoor scene exploration and randomness aspect of open-world classes. Extensive experiments reveal the efficacy of the proposed contributions leading to promising open-world 3D instance segmentation performance.
+</p>
+<br>
+<br>
+<h2>
+  Pipeline
+</h2>
+<br>
+<div align="center">
+<img src="../../images/arch.png" style="width: 100%;">
+</div>
+<br>
+<br>
+
+<h2>Qualitative results</h2>
+<h3>Unknown classes segmentation</h3>
+<br>
+We show bellow the predicted known and unknown instances compared to the ground truth (Green for knowns and blue for unknowns) instances by <b>3D-OWIS</b>.
+<br>
+<h3>Scene 1</h3>
+<br>
+
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Ground truth</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Predicted known instances</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Predicted known instances</h5>
+  </div>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene1/task1/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/3d_scenes/unknowns_seg/knowns/scene1/scene0025_01-kn-3d_owis.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/3d_scenes/unknowns_seg/unknowns/scene1/scene0025_01-unkn-3d_owis.ply">
+    </iframe>
+  </div>
+</div>
+<br>
+<br>
+<h3>Scene 2</h3>
+<br>
+
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Ground truth</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Predicted known instances</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Predicted known instances</h5>
+  </div>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene1/task1/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/3d_scenes/unknowns_seg/knowns/scene2/scene0046_00-kn-3d_owis.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/3d_scenes/unknowns_seg/unknowns/scene2/scene0046_00-unkn-3d_owis.ply">
+    </iframe>
+  </div>
+</div>
+<br>
+<br>
+<h3>Continual learning</h3>
+<br>
+We show the predictions of <b>3D-OWIS</b> throughout the three tasks.
+<br>
+<br>
+
+<h3>Scene 1</h3>
+<br>
+
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 1</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 2</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 3</h5>
+  </div>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene1/task1/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene1/task2/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene1/task3/scene.ply">
+    </iframe>
+  </div>
+</div>
+<br>
+<br>
+<!-- 
+<h3>Scene 2</h3>
+<br>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 1</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 2</h5>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <h5>Task 3</h5>
+  </div>
+</div>
+<div style="display: flex; align-items: center; justify-content: center; width: 100%; ">
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene2/task1/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene2/task2/scene.ply">
+    </iframe>
+  </div>
+  <div style="display: flex; align-items: center; justify-content: center; width: 33%; ">
+    <iframe
+    width="100%" style="border:1px solid #eeeeee;"
+    src="https://3dviewer.net/embed.html#model=https://github.com/aminebdj/aminebdj.github.io/blob/master/3d_scenes/scene2/task3/scene.ply">
+    </iframe>
+  </div>
+</div> -->
+<br>
+<br>
+<!-- <section class="section" id="BibTeX">
+  <h2 class="title">BibTeX 🙏</h2>
+  <div class="container is-max-desktop content"><pre><code>@inproceedings{Hanoona2022Bridging,
+    title={Bridging the Gap between Object and Image-level Representations for Open-Vocabulary Detection},
+    author={Rasheed, Hanoona and Maaz, Muhammad and Khattak, Muhammad Uzair  and Khan, Salman and Khan, Fahad Shahbaz},
+    booktitle={36th Conference on Neural Information Processing Systems (NIPS)},
+    year={2022}
+  }
+  </code></pre></div>
+</section> -->
