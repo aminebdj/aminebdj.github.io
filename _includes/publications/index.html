@@ -14,8 +14,7 @@
       {%- assign publication_github = publication.code -%}
       {%- assign publication_paper = publication.paper -%}
       {%- assign publication_webpage = publication.webpage -%}
-      {%- assign add = add.webpage -%}
-      console.log(add)
+      {%- assign add = publication.add -%}
       {%- if publication.external_url -%}
         {%- assign publication_url = publication.external_url -%}
         {%- assign external    = true -%}
