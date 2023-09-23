@@ -60,9 +60,7 @@
     coll[i].addEventListener("click", function () {
       var id = this.id;
       var content = document.getElementById("content-" + id.split("-")[1]+"-"+id.split("-")[2]); // Extract the publication ID
-      if (content.style.maxHeight!==null) {
-      console.log('yes')
-      console.log(content.style.maxHeight)
+      if (content.style.maxHeight) {
         content.style.maxHeight = null;
       } else {
         content.style.maxHeight = content.scrollHeight + "px";
