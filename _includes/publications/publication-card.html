@@ -13,31 +13,33 @@
           </h5>
           <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
           <div id="{{ publication_id }}-tools" class="tags card-text">
-            <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
-              <span class="icon">
-                <i class="fas fa-bolt"></i>
+            {%- if add == "true" -%}
+              <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
+                <span class="icon">
+                  <i class="fas fa-bolt"></i>
+                </span>
+                <span>publication Page</span>
               </span>
-              <span>publication Page</span>
-            </span>
-            <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
-              <span>
-                <i class="fas fa-file-pdf"></i>
+              <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
+                <span>
+                  <i class="fas fa-file-pdf"></i>
+                </span>
+                <span>Paper</span>
               </span>
-              <span>Paper</span>
-            </span>
 
-            <span class="btn collapsible" id="collapse-{{publication_ids}}">
-              <span>
-                <i class="fas fa-book"></i>
+              <span class="btn collapsible" id="collapse-{{publication_ids}}">
+                <span>
+                  <i class="fas fa-book"></i>
+                </span>
+                <span>BibTex</span>
               </span>
-              <span>BibTex</span>
-            </span>
-            <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
-              <span style="color: #777;">
-                <i class="fab fa-github"></i>
+              <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
+                <span style="color: #777;">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span style="color: #777;">Code</span>
               </span>
-              <span style="color: #777;">Code</span>
-            </span>
+              {%- endif -%}
             {%- for tool in publication_tools -%}
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>
             {%- endfor -%}
