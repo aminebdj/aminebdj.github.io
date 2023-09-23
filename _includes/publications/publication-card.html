@@ -58,7 +58,7 @@
   for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener("click", function () {
       var id = this.id;
-      var content = document.getElementById("content-" + id.split("-")[1]); // Extract the publication ID
+      var content = document.getElementById("content-" + id.split("-")[1]+"-"+id.split("-")[2]); // Extract the publication ID
       if (content.style.maxHeight) {
         content.style.maxHeight = null;
       } else {
