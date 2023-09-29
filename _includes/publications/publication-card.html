@@ -14,12 +14,14 @@
           <p id="{{ publication_id }}-desc" class="card-text">{{ publication_desc }}</p>
           <div id="{{ publication_id }}-tools" class="tags card-text">
             {%- if add == 'true' -%}
+              {%- if publication_webpage != '' -%}
               <span class="btn" onclick="window.location.href='{{ publication_webpage }}';">
                 <span class="icon">
                   <i class="fas fa-bolt"></i>
                 </span>
                 <span>publication Page</span>
               </span>
+              {%- endif -%}
               <span class="btn" onclick="window.location.href='{{ publication_paper }}';">
                 <span>
                   <i class="fas fa-file-pdf"></i>
@@ -33,12 +35,14 @@
                 </span>
                 <span>BibTex</span>
               </span>
+              {%- if publication_github != '' -%}
               <span class="btn"  onclick="window.location.href='{{ publication_github }}';"> 
                 <span style="color: #777;">
                   <i class="fab fa-github"></i>
                 </span>
                 <span style="color: #777;">Code</span>
               </span>
+              {%- endif -%}
             {%- endif -%}
             {%- for tool in publication_tools -%}
             <span class="badge badge-pill text-primary border border-primary ml-1">{{ tool }}</span>

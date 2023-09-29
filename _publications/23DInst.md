@@ -6,7 +6,7 @@ image: ../images/publications/3DInst/3DInst.png
 description: Salwa K. Al Khatib, <b>Mohamed El Amine Boudjoghra</b>, Jean Lahoud, Fahad Shahbaz Khan, <i>arXiv</i>, 2023.
 external_url: 3dinst
 code: ''
-paper: ''   
+paper: 'https://openaccess.thecvf.com/content/ICCV2023/papers/Al_Khatib_3D_Instance_Segmentation_via_Enhanced_Spatial_and_Semantic_Supervision_ICCV_2023_paper.pdf'   
 webpage: ''
-add: 'false'
+add: 'true'
 ---
