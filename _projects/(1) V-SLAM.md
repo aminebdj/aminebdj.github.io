@@ -1,5 +1,5 @@
 ---
-name: V-SLAM on Lie groups    
+name: V-SLAM on Lie groups (MSc thesis)  
 tools: [Lie theory, Lyapunov stability analysis]
 image: ../images/projects/v-slam.png
 description: 'This work focuses on leveraging the potential of Lie theory in state estimation to derive
