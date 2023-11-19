@@ -30,12 +30,52 @@
        clear:both;
        margin-top:-1px;
       }
+      .bouncy {
+        font-size : 15rem;
+      }
+      .bouncing {
+        animation : rubberband 800ms alternate ease-out;
+      }
+      @keyframes rubberband {
+          0%{
+              transform: scaleX(1);
+          }
+          40%{
+              transform: scaleX(1.12) scaleY(0.75);
+          }
+          55%{
+              transform: scaleX(0.85) scaleY(1);
+          }
+          65%{
+              transform: scaleX(1.09) scaleY(0.85);
+          }
+          75%{
+              transform: scaleX(0.9)  scaleY(1);
+          }
+          90%{
+              transform: scaleX(1.05) scaleY(0.95);
+          }
+          100%{
+              transform: scaleX(1) scaleY(1);
+          }
+      }
       </style>
-      
+      <script>
+        const bouncy = document.querySelector(".bouncy");
+
+        bouncy.addEventListener("mouseenter", toggleRubberBand);
+
+        function toggleRubberBand(e){
+          bouncy.classList.add("bouncing");
+          bouncy.addEventListener("animationend", ()=>{
+            bouncy.classList.remove("bouncing");
+          });
+        }
+      </script>
     <br\>
     <br\>
     <div id="outer"> 
-      <div id="col5"> <h3  style="text-align:center; color: rgb(216, 55, 55)">Looking for a PhD position in 3D scene understanding</h3></div>
+      <div id="col5" class="bouncy"> <h3  style="text-align:center; color: rgb(216, 55, 55)">Looking for a PhD position in 3D scene understanding</h3></div>
       <div id="clearer"></div>
     </div>
 
