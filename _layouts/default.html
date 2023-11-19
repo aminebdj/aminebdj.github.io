@@ -60,22 +60,12 @@
           }
       }
       </style>
-      <script>
-        const bouncy = document.querySelector(".bouncy");
-
-        bouncy.addEventListener("mouseenter", toggleRubberBand);
-
-        function toggleRubberBand(e){
-          bouncy.classList.add("bouncing");
-          bouncy.addEventListener("animationend", ()=>{
-            bouncy.classList.remove("bouncing");
-          });
-        }
-      </script>
+      
     <br\>
     <br\>
+    <div class="bouncy">A</div>
     <div id="outer"> 
-      <div id="col5"> <h3  style="text-align:center; color: rgb(216, 55, 55)"> <div  class="bouncy">Looking for a PhD position in 3D scene understanding</div></h3></div>
+      <div id="col5" class="bouncy"> <h3  style="text-align:center; color: rgb(216, 55, 55)">Looking for a PhD position in 3D scene understanding</h3></div>
       <div id="clearer"></div>
     </div>
     <br\>
@@ -90,3 +80,15 @@
 </body>
 
 </html>
+<script>
+  const bouncy = document.querySelector(".bouncy");
+
+  bouncy.addEventListener("mouseenter", toggleRubberBand);
+
+  function toggleRubberBand(e){
+    bouncy.classList.add("bouncing");
+    bouncy.addEventListener("animationend", ()=>{
+      bouncy.classList.remove("bouncing");
+    });
+  }
+</script>
