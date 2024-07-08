@@ -282,7 +282,7 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 30px; /* Full viewport height for vertical centering */
+    // height: 30px; /* Full viewport height for vertical centering */
     gap: 20px; /* Space between buttons */
 }
 
@@ -297,7 +297,6 @@ iframe{
     border: none;
     border-radius: 20px;
     font-size: 16px;
-    text-decoration: none;
     transition: background-color 0.3s;
 }
 
