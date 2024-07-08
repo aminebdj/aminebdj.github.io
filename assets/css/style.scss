@@ -281,8 +281,8 @@ iframe{
 .button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 20px; /* Space between buttons */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Styling for the custom buttons */
