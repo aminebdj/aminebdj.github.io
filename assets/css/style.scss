@@ -277,12 +277,13 @@ iframe{
         }
     }
 
-    /* Styling for the button container to center its contents */
+/* Styling for the button container to center its contents */
 .button-container {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: auto; /* Full viewport height for vertical centering */
     gap: 20px; /* Space between buttons */
-    margin: 0 auto; /* Center the container horizontally */
 }
 
 /* Styling for the custom buttons */
@@ -294,7 +295,7 @@ iframe{
     color: #fff;
     background-color: #4B0082; /* Dark purple color */
     border: none;
-    border-radius: 20px;
+    border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
 }
@@ -308,11 +309,5 @@ iframe{
 .custom-button:hover {
     background-color: #6A0DAD; /* Slightly lighter dark purple */
 }
-.arxiv-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
 
 @import "portfolYOU";
