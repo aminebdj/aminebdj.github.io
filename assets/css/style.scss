@@ -282,7 +282,7 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto; /* Full viewport height for vertical centering */
+    height: 30px; /* Full viewport height for vertical centering */
     gap: 20px; /* Space between buttons */
 }
 
@@ -295,8 +295,9 @@ iframe{
     color: #fff;
     background-color: #4B0082; /* Dark purple color */
     border: none;
-    border-radius: 15px;
+    border-radius: 20px;
     font-size: 16px;
+    text-decoration: none;
     transition: background-color 0.3s;
 }
 
@@ -308,6 +309,7 @@ iframe{
 /* Hover effect */
 .custom-button:hover {
     background-color: #861ecf; /* Slightly lighter dark purple */
+    text-decoration: none;
 }
 
 @import "portfolYOU";
