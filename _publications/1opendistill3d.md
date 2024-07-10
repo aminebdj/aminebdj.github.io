@@ -1,5 +1,5 @@
 ---
-name: OpenDistill3D: Open-World 3D Instance Segmentation with Unified Self-Distillation for Continual Learning and Unknown Class Discovery
+name: Open-World 3D Instance Segmentation with Unified Self-Distillation for Continual Learning and Unknown Class Discovery
 tools: [ECCV 2024]
 id: opendistill3d
 image: ../images/publications/opendistill3d/opendistill3d_thmb.png
