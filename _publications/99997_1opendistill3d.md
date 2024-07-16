@@ -1,6 +1,6 @@
 ---
 name: Continual Learning and Unknown Object Discovery in 3D Scenes via Continual Self-Distillation
-tools: [ECCV 2024]
+tools: ECCV 2024
 id: opendistill3d
 image: ../images/publications/opendistill3d/opendistill3d_thmb.png
 description: <b>Mohamed El Amine Boudjoghra</b>, Jean Lahoud, Hisham Cholakkal, Rao Muhammad Anwer, Salman Khan, Fahad Shahbaz Khan
