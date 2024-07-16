@@ -1,5 +1,5 @@
 ---
-name: Continual Learning and Unknown Object Discovery in 3D Scenes via Continual Self-Distillation
+name: Continual Learning and Unknown Object Discovery in 3D Scenes via Self-Distillation
 tools: ECCV 2024
 id: opendistill3d
 image: ../images/publications/opendistill3d/opendistill3d_thmb.png
