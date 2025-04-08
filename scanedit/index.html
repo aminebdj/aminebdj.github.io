@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Hierarchically-Guided Functional 3D Scan Editing.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta property="og:url" content="https://aminebdj.github.io/scanedit/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ScanEdit: Hierarchically-Guided Functional 3D Scan Editing</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon" style="color: #413f3f !important;">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link"  style="color: #413f3f !important;">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="" style="color: #413f3f !important;">
+            OpenYolo3D
+          </a>
+          <a class="navbar-item" href="" style="color: #413f3f !important;">
+            OpenDistill3D
+          </a>
+          <a class="navbar-item" href="" style="color: #413f3f !important;">
+            3D-OWIS
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span class="dnerf"><b>SceneEdit</b></span>: Hierarchically-Guided Functional 3D Scan Editing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://aminebdj.github.io/">Mohamed El Amine Boudjoghra</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a><sup>1</sup>,
+            </span>
+          
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Munich,</span>
+            <span class="author-block"><sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block"">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark"
+                   style="background-color: #363636 !important; color: #c0bfbf !important;"
+                   onmouseover="this.style.backgroundColor='#363636'; this.style.color='#c0bfbf';"
+                   onmouseout="this.style.backgroundColor='#363636'; this.style.color='#c0bfbf';">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming soon)</span>
+                </a>
+              </span>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/scene_edit/teaser_vid.mp4"
+                type="video/mp4">
+      </video>
+      <figure class="image">
+        <img src="./static/images/teaser_figure.png" alt="Teaser Image">
+      </figure> 
+      <br>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf"><b>ScanEdit</b></span> Hierarchically-Guided Functional 3D Scan Editing
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small" style="background-color: #000000 !important;">
+  <div class="hero-body" style="background-color: #000000 !important;">
+    <div class="container"  style="background-color: #000000 !important;">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scene_edit/teaser_vid.mp4"
+                    type="video/mp4">
+          </video>C
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scene_edit/teaser_vid.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scene_edit/teaser_vid.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/scene_edit/teaser_vid.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            With the fast pace of 3D capture technology and resulting abundance of 3D data, effective 3D scene editing becomes essential for a variety of graphics applications.In this work we present <span class="dnerf"><b>ScanEdit</b></span>, an instruction-driven method for functional editing of complex, real-world 3D scans.
+          </p>
+          <p>
+            
+          To model large and interdependent sets of objectswe propose a hierarchically-guided approach.
+          Given a 3D scan decomposed into its object instances, we first construct a hierarchical scene graph representation to enable effective, tractable editing. 
+          We then leverage reasoning capabilities of Large Language Models (LLMs) and translate high-level  language instructions into actionable commands applied hierarchically to the scene graph.
+          </p>
+          <p>
+            Finally, <span class="dnerf"><b>ScanEdit</b></span> integrates LLM-based guidance with explicit physical constraints and generates realistic scenes where object arrangements obey both physics and common sense. 
+            In our extensive experimental evaluation <span class="dnerf"><b>ScanEdit</b></span> outperforms state of the art and demonstrates excellent results for a variety of real-world scenes and input instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src=""
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+
+        <!-- Hierarchical placement. -->
+        <h3 class="title is-4">Hierarchical placement</h3>
+        <div class="content has-text-justified">
+          <p>
+            description
+          </p>
+        </div>
+        <br/>
+        <!--/ Hierarchical placement. -->
+
+        <!-- optimization. -->
+        <h3 class="title is-4">Scene Sub-graph optimization</h3>
+        <div class="content has-text-justified">
+          <p>
+            description
+          </p>
+        </div>
+        <br/>
+        <!--/ optimization. -->
+
+
+      </div>
+
+    <!-- Baseline comparison. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Baseline comparison</h2>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container" style="background-color: #000000 !important;">
+    <div class="content has-text-centered" style="background-color: #000000 !important;">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered" style="background-color: #000000 !important;">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

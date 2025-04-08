@@ -1,0 +1,185 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: black;  /* Add this line for black background */
+  color: white;             /* Add this line for white text */
+}
+
+/* Update footer icon color to be visible on dark background */
+.footer .icon-link {
+    font-size: 25px;
+    color: white;           /* Changed from #000 (black) to white */
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: white;           /* Ensure links are visible */
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #aaa;            /* Lightened from #555 for better visibility */
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 75%) !important;  /* Lightened the blue for better visibility */
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #666;   /* Darkened border for dark theme */
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.interpolation-panel {
+  background: #333;         /* Darkened from #f5f5f5 */
+  border-radius: 10px;
+  color: white;             /* Added for text visibility */
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0 !important; /* Very light gray */
+}
+
+/* If you have specific header classes, target them too */
+.publication-title,
+.publication-authors,
+.teaser {
+  color: #f0f0f0 !important;
+}
+
+/* Make sure venue is lighter too */
+.publication-venue {
+  color: #cccccc !important; /* Lighter than previous #aaa */
+}
+
+/* For any other potential header elements */
+.hero.is-info .title,
+.hero.is-info .subtitle {
+  color: #f0f0f0 !important;
+}
+
+/* If you have navbar */
+.navbar-item,
+.navbar-link {
+  color: #f0f0f0 !important;
+}
+
+/* For card headers if you have them */
+.card-header-title {
+  color: #f0f0f0 !important;
+}
