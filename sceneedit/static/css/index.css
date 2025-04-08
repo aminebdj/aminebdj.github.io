@@ -1,7 +1,8 @@
 body {
   font-family: 'Noto Sans', sans-serif;
+  background-color: black;  /* Add this line for black background */
+  color: white;             /* Add this line for white text */
 }
-
 
 .footer .icon-link {
     font-size: 25px;
