@@ -165,9 +165,15 @@
         <source src="./static/videos/scene_edit/teaser_vid.mp4"
                 type="video/mp4">
       </video>
-      <figure class="image">
+      <figure class="image" id="delayed-image" style="opacity: 0; transition: opacity 1s ease;">
         <img src="./static/images/teaser_figure.png" alt="Teaser Image">
-      </figure> 
+      </figure>
+      
+      <script>
+        setTimeout(function() {
+          document.getElementById("delayed-image").style.opacity = "1";
+        }, 28000);
+      </script>
       <br>
       <h2 class="subtitle has-text-centered">
         <span class="dnerf"><b>ScanEdit</b></span> Hierarchically-Guided Functional 3D Scan Editing
