@@ -150,3 +150,36 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #f0f0f0 !important; /* Very light gray */
+}
+
+/* If you have specific header classes, target them too */
+.publication-title,
+.publication-authors,
+.teaser {
+  color: #f0f0f0 !important;
+}
+
+/* Make sure venue is lighter too */
+.publication-venue {
+  color: #cccccc !important; /* Lighter than previous #aaa */
+}
+
+/* For any other potential header elements */
+.hero.is-info .title,
+.hero.is-info .subtitle {
+  color: #f0f0f0 !important;
+}
+
+/* If you have navbar */
+.navbar-item,
+.navbar-link {
+  color: #f0f0f0 !important;
+}
+
+/* For card headers if you have them */
+.card-header-title {
+  color: #f0f0f0 !important;
+}
