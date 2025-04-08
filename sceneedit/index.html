@@ -229,6 +229,7 @@
     </div>
   </div>
 </section>
+ 
 
 
 <section class="section">
@@ -239,31 +240,17 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            With the fast pace of 3D capture technology and resulting abundance of 3D data, effective 3D scene editing becomes essential for a variety of graphics applications.In this work we present <b>SceneEdit</b>, an instruction-driven method for functional editing of complex, real-world 3D scans.
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            
+          To model large and interdependent sets of objectswe propose a hierarchically-guided approach.
+          Given a 3D scan decomposed into its object instances, we first construct a hierarchical scene graph representation to enable effective, tractable editing. 
+          We then leverage reasoning capabilities of Large Language Models (LLMs) and translate high-level  language instructions into actionable commands applied hierarchically to the scene graph.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Finally, <b>SceneEdit</b> integrates LLM-based guidance with explicit physical constraints and generates realistic scenes where object arrangements obey both physics and common sense. 
+            In our extensive experimental evaluation <b>SceneEdit</b> outperforms state of the art and demonstrates excellent results for a variety of real-world scenes and input instructions.
           </p>
         </div>
       </div>
