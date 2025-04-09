@@ -269,7 +269,7 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
         
-        <video id="teaser" autoplay muted playsinline>
+        <video id="teaser" autoplay muted loop playsinline>
           <source src="./static/videos/scanedit/method_video.mp4" type="video/mp4">
         </video>
         <!-- Hierarchical placement. -->
@@ -279,7 +279,7 @@
             We first use a VLM \(\Gamma\) and 3D heursitics to construct a hierarchical graph \(\mathcal{G}\) where the 'on top of' edge defines the hierarchy. Next, we use an LLM \(\Omega\) to reduce the input graph \(\mathcal{G}\) into a sub-graph \(\mathcal{G}_s\) with only relevent nodes and edges.
           </p>
           <p>
-            Given the input text instruction \(I\) and the sub-graph (\mathcal{G}_s\), we use an LLM \(\Psi\) to generate an edited sub-graph \(\mathcal{G}'_s\), with the new desired edges. Furthermore, each node contains a node-specific-instruction
+            Given the input text instruction \(I\) and the sub-graph \(\mathcal{G}_s\), we use an LLM \(\Psi\) to generate an edited sub-graph \(\mathcal{G}'_s\), with the new desired edges. Furthermore, each node contains a node-specific-instruction
             which the LLM  \(\Psi\) generates based on the input sub-graph state and the instruction. Next, the output edited sub-graph \(\mathcal{G}'_s\) is used to construct an instruction queue ordered following the hierarchy.
           </p>
           <p>
