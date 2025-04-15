@@ -1,14 +1,14 @@
-- title: PhD in computer science
+- title: PhD in computer science (TUM)
   from: 2024
   to: 2028
   description: Functional 3D scene editing using LLMs, and 3D scene generation.
 
-- title: M.S.c in computer vision
+- title: M.S.c in computer vision (MBZUAI)
   from: 2022
   to: 2024
   description: I am focusing on 3D scene understanding.
 
-- title: Engineering in control systems and automation 
+- title: Engineering degree in control systems and automation (ENPA) 
   from: 2017
   to: 2022
   description: My final project was on V-SLAM with Lie Groups, where we explored a new approach of map and pose estimation from sparse point cloud landmarks and the robots relative velocity. 
