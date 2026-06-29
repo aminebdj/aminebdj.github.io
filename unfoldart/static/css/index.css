@@ -1,0 +1,234 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+/* ---------- Hero with background video ---------- */
+.hero.has-bg-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero.has-bg-video .hero-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* white veil so the title/authors stay readable over the video */
+.hero.has-bg-video .hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.78);
+  z-index: 1;
+}
+
+.hero.has-bg-video .hero-body {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Hero / title ---------- */
+.publication-title {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 45%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-venue {
+  color: #6b7280;
+  font-weight: bold;
+}
+
+.publication-links {
+  margin-top: 1.25rem;
+}
+
+/* Buttons for resources that are not yet available */
+.button.is-coming-soon,
+.button.is-coming-soon:hover,
+.button.is-coming-soon:focus {
+  background-color: #e5e7eb !important;
+  border-color: #e5e7eb !important;
+  color: #9ca3af !important;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ---------- Teaser ---------- */
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+}
+
+/* ---------- Section headers ---------- */
+h1, h2, h3, h4, h5, h6 {
+  color: #111827;
+}
+
+.section .title.is-3 {
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Generic media placeholders ---------- */
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #f3f4f6;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  color: #6b7280;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.placeholder .ph-icon {
+  font-size: 2.25rem;
+  margin-bottom: 0.6rem;
+  color: #9ca3af;
+}
+
+.placeholder .ph-label {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #4b5563;
+}
+
+.placeholder .ph-sub {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-top: 0.25rem;
+}
+
+.placeholder.is-teaser  { aspect-ratio: 16 / 7;  }
+.placeholder.is-video   { aspect-ratio: 16 / 9;  }
+.placeholder.is-wide    { aspect-ratio: 21 / 9;  }
+.placeholder.is-figure  { aspect-ratio: 16 / 8;  }
+.placeholder.is-square  { aspect-ratio: 4 / 3;   }
+
+/* ---------- Carousel ---------- */
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 8px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0;
+}
+
+.results-carousel .item .placeholder {
+  border: none;
+  border-radius: 0;
+}
+
+/* ---------- Video embed ---------- */
+.publication-video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.publication-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- Method step cards ---------- */
+.step-card {
+  background: #f9fafb;
+  border: 1px solid #eceef1;
+  border-radius: 12px;
+  padding: 1.25rem 1.4rem;
+  height: 100%;
+}
+
+.step-card .step-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 0.7rem;
+}
+
+.step-card h4 {
+  font-family: 'Google Sans', sans-serif;
+  margin-bottom: 0.4rem;
+}
+
+/* ---------- Loss / contribution boxes ---------- */
+.note-box {
+  background: #f9fafb;
+  border-left: 4px solid #111827;
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 0.9rem;
+}
+
+.note-box h4 {
+  margin-bottom: 0.25rem;
+}
+
+/* ---------- BibTeX ---------- */
+#BibTeX pre {
+  background-color: #f3f4f6 !important;
+  color: #1f2937;
+  border-radius: 10px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-item,
+.navbar-link {
+  color: #374151 !important;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  background-color: #f9fafb;
+  color: #6b7280;
+}
+
+.footer a {
+  color: hsl(204, 86%, 45%);
+}

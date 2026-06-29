@@ -1,19 +1,52 @@
-<div class="row justify-content-center align-items-center p-4">
-  <div class="col-lg-4 col-md-6 text-center mt-4">
+<!-- ===================== Compact academic home page (styles in assets/css/style.scss) ===================== -->
+<div class="home-wrap">
 
-    <!-- Fine Circle Responsive Image -->
-    <div id="container" class="my-2">
-      <div id="dummy"></div>
-      <div id="element">
-        <img src="{{ site.author.image }}" alt="{{ site.title }}" class="circle-image wow animated zoomIn" data-wow-delay=".1s">
+  <!-- ===== Header ===== -->
+  <div class="home-header">
+    <div class="photo">
+      <img src="{{ site.author.image }}" alt="{{ site.author.name }}">
+    </div>
+    <div class="intro">
+      <h1>{{ site.author.name }}</h1>
+
+      <!-- ===== Edit your bio here ===== -->
+      <div class="bio text-muted">
+        <p>
+          PhD student in the 3DAI lab at the <a href="https://www.tum.de/en/">Technical University of Munich</a>,
+          advised by Prof. <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a> and
+          Prof. <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a>, with a focus on functional
+          3D scene editing and generation.
+        </p>
+        <p>
+          I previously worked as a research assistant with Prof.
+          <a href="https://scholar.google.com/citations?user=zvaeYnUAAAAJ&amp;hl=en">Fahad Khan</a>, and
+          received my MSc in Computer Vision from <a href="https://mbzuai.ac.ae/">MBZUAI</a> (3D scene
+          understanding). Before that, I earned my engineering degree in control systems and automation from the
+          <a href="https://en.wikipedia.org/wiki/National_Polytechnic_School_(Algeria)">National Polytechnic School</a>.
+        </p>
+      </div>
+
+      <div class="home-social">
+        {% for account in site.author %}
+          {%- assign service_name = account[0] -%}
+          {%- assign service_data = site.data.social-media[service_name] -%}
+          {%- if service_data -%}
+            <a href="{{ service_data.url }}{{ account[1] }}" title="{{ service_name }}"
+               {% unless service_name == 'email' %}target="_blank" rel="noopener"{% endunless %}>
+              <i class="{{ service_data.icon }}"></i>
+            </a>
+          {%- endif -%}
+        {% endfor %}
       </div>
     </div>
-
-    <p class="text-muted wow animated slideInUp" data-wow-delay=".15s">{{ site.description }}</p>
-
   </div>
-  
+
+  <!-- ===== News ===== -->
+  {% include news.html %}
+
+  <!-- ===== Publications ===== -->
+  {% include publications-compact.html %}
+
 </div>
-{% include news.html %}
 
 {% include analytics.html %}

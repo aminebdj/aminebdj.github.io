@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image.">
+  <meta name="keywords" content="Articulated 3D, Video Diffusion, Agentic Reasoning, 3D Generation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image" />
+  <meta property="og:url" content="https://aminebdj.github.io/unfoldart/" />
+  <title>UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<!-- ============================ NAVBAR ============================ -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://aminebdj.github.io/">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">More Research</a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://aminebdj.github.io/scanedit/">ScanEdit</a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2406.02548">OpenYolo3D</a>
+          <a class="navbar-item" href="https://arxiv.org/abs/2309.14338">3D-OWIS</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================ HEADER ============================ -->
+<section class="hero has-bg-video">
+  <img class="hero-bg-video" src="./static/images/bg.png" alt="">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <span class="dnerf"><b>UnfoldArt</b></span>: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://aminebdj.github.io/">Mohamed El Amine Boudjoghra</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.di.ens.fr/~laptev/">Ivan Laptev</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Technical University of Munich,</span>
+            <span class="author-block"><sup>2</sup>Mohamed Bin Zayed University of Artificial Intelligence</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF (not yet available) -->
+              <span class="link-block">
+                <a class="external-link button is-normal is-rounded is-coming-soon" title="Coming soon">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper (soon)</span>
+                </a>
+              </span>
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/aminebdj/UnfoldArt"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TEASER ============================ -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- Teaser video -->
+      <video id="teaser" autoplay muted loop playsinline style="width: 100%; border-radius: 12px;">
+        <source src="./static/videos/short_teaser.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem;">
+        <span class="dnerf"><b>UnfoldArt</b></span> generates articulated 3D objects from a single text or image input,
+        recovering both the external part structure and the high-fidelity interior geometry revealed under articulation.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ ABSTRACT ============================ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Articulated 3D objects are essential for interactive environments in embodied AI, robotics, and virtual
+            reality, but reconstructing their structure and motion from sparse observations remains challenging.
+            Existing approaches remain largely constrained by lack of supervised data or lack the priors needed to
+            reliably recover articulation, hidden geometry, and internal object structure.
+          </p>
+          <p>
+            We present the first debate-driven agentic approach to articulated 3D object reconstruction from text or
+            image inputs that both grounds articulation reasoning in concrete motion and exposes the occluded geometry
+            revealed under articulation. High-level agents reason about object semantics and motion using knowledge
+            from vision-language and video models, while low-level agents estimate articulation parameters and
+            interaction points; together, they engage in a two-round structured debate that first exploits
+            global&ndash;local disagreement and then grounds the agents in freely generated video.
+          </p>
+          <p>
+            The same video prior, conditioned on the agreed articulation, then drives each part through its motion to
+            expose occluded interiors and geometry that cannot be inferred from a single static view. By combining
+            agentic reasoning with a video generative prior, our approach jointly infers articulation and reconstructs
+            complete 3D articulated objects, producing high-fidelity geometry, internal structure, and motion-consistent
+            states beyond directly observed surfaces.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================ PAPER VIDEO ============================ -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div style="position: relative; width: 100%; padding-bottom: 56.25%; border-radius: 12px; overflow: hidden;">
+          <iframe src="https://www.youtube.com/embed/PBB3jevRhNQ"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                  title="UnfoldArt video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ QUALITATIVE CAROUSEL ============================ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+    <div id="results-carousel" class="carousel results-carousel">
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/1.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/2.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/3.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/4.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/5.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/6.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/7.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/8.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/9.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/10.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/11.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/12.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/13.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/14.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/15.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/16.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/17.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/18.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/19.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/qualitatives/20.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+
+    <!-- Baseline comparison slider -->
+    <h2 class="title is-3 has-text-centered" style="margin-top: 3rem;">Baseline comparison</h2>
+    <div id="baseline-carousel" class="carousel results-carousel">
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/baseline_comparison/1.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/baseline_comparison/2.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/baseline_comparison/3.mp4" type="video/mp4"></video>
+      </div>
+      <div class="item">
+        <video autoplay controls muted loop playsinline height="100%">
+          <source src="./static/videos/baseline_comparison/4.mp4" type="video/mp4"></video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ METHOD ============================ -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="column is-full-width">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+
+      <!-- Method overview video (Fig. 2) -->
+      <figure class="image">
+        <video autoplay muted loop playsinline style="width: 100%; border-radius: 12px;">
+          <source src="./static/videos/method.mp4" type="video/mp4">
+        </video>
+      </figure>
+
+      <!-- Hierarchical agents -->
+      <h3 class="title is-4" style="margin-top: 2rem;">Hierarchical agentic reasoning</h3>
+      <div class="content has-text-justified">
+        <p>
+          Articulation reasoning is most reliable when distributed across scales rather than collapsed into a single
+          query. We therefore split the task across a hierarchy of three LLM/VLM agents that divide labor between
+          global semantic reasoning and local geometric prediction.
+        </p>
+      </div>
+
+      <div class="columns">
+        <div class="column">
+          <div class="step-card">
+            <img class="step-logo" src="./static/images/agents/Decomp.png" alt="Decomposer">
+            <h4 class="title is-5">Decomposer</h4>
+            <p>Reasons globally over the object to identify movable parts and their plausible motion families.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="step-card">
+            <img class="step-logo" src="./static/images/agents/Grounder.png" alt="Grounder">
+            <h4 class="title is-5">Grounder</h4>
+            <p>Chooses a 2D segmentation strategy on the mesh and orchestrates the per-part articulation order.</p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="step-card">
+            <img class="step-logo" src="./static/images/agents/Articulator.png" alt="Articulator">
+            <h4 class="title is-5">Articulator</h4>
+            <p>Predicts the joint type, axis, and initial pivot for each part, the most error-prone step.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BIBTEX ============================ -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{boudjoghra2026unfoldart,
+      title={UnfoldArt: Zero-Shot Recovery of Full Articulated 3D Objects from Text or Image},
+      author={Mohamed El Amine Boudjoghra and Ivan Laptev and Angela Dai},
+      year={2026},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

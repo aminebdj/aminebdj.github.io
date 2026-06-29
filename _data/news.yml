@@ -1,0 +1,20 @@
+# Compact news feed — newest first. Edit/add entries here.
+# date: short label shown on the left (e.g. "Jun 2025")
+# html: the entry text (HTML allowed)
+- date: "Jun 2025"
+  html: "<b>Two</b> papers accepted to <b>ICCV 2025</b>."
+- date: "Apr 2025"
+  html: "<b>One</b> paper accepted to <b>ICRA 2025</b>."
+- date: "Jan 2025"
+  html: "<b>One</b> paper accepted to <b>ICLR 2025</b>."
+  tag: "Oral"
+- date: "Jul 2024"
+  html: "<b>One</b> paper accepted to <b>ECCV 2024</b>."
+- date: "Sep 2023"
+  html: "<b>One</b> paper accepted to <b>NeurIPS 2023</b>."
+- date: "Jul 2023"
+  html: "<b>One</b> paper accepted to <b>ICCV 2023</b>."
+- date: "Aug 2022"
+  html: "Started my MSc in Computer Vision at <a href='https://mbzuai.ac.ae/'>MBZUAI</a>."
+- date: "Jun 2022"
+  html: "Graduated from the National Polytechnic School (Algiers) with an engineering degree in Control Systems &amp; Automation."

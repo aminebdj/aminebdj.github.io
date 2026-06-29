@@ -1,0 +1,44 @@
+<!-- ===================== Compact publications list ===================== -->
+<section class="home-section">
+  <h2 class="home-h2">Publications</h2>
+
+  {% for publication in site.publications %}
+    {%- assign img = publication.image | replace: '../', '/' -%}
+    {%- assign link = publication.webpage -%}
+    {%- if link == '' or link == nil -%}{%- assign link = publication.paper -%}{%- endif -%}
+    {%- if link == '' or link == nil -%}{%- assign link = publication.code -%}{%- endif -%}
+
+    <div class="pub">
+      <a class="pub-thumb" href="{{ link }}">
+        {%- if publication.image and publication.image != '' -%}
+          <img src="{{ img | relative_url }}" alt="{{ publication.name }}">
+        {%- else -%}
+          <span class="pub-thumb-ph">{{ publication.tools }}</span>
+        {%- endif -%}
+      </a>
+      <div class="pub-meta">
+        <div class="pub-title">
+          <a href="{{ link }}">{{ publication.name }}</a>
+        </div>
+        <div class="pub-authors">{{ publication.description }}</div>
+        <div class="pub-tagrow">
+          {%- assign vclass = 'badge-venue' -%}
+          {%- if publication.tools == 'arXiv' -%}{%- assign vclass = 'badge-venue badge-arxiv' -%}{%- endif -%}
+          <span class="{{ vclass }}">{{ publication.tools }}</span>
+          {%- if publication.award and publication.award != '' -%}<span class="badge-honor">{{ publication.award }}</span>{%- endif -%}
+        </div>
+        <div class="pub-links">
+          {%- if publication.webpage != '' and publication.webpage -%}
+            <a href="{{ publication.webpage }}">Project</a>
+          {%- endif -%}
+          {%- if publication.paper != '' and publication.paper -%}
+            <a href="{{ publication.paper }}">Paper</a>
+          {%- endif -%}
+          {%- if publication.code != '' and publication.code -%}
+            <a href="{{ publication.code }}">Code</a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</section>
