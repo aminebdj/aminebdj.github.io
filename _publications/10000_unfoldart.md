@@ -6,7 +6,7 @@ image: ../images/publications/unfoldart/teaser.png
 description: <b>Mohamed El Amine Boudjoghra</b>, Ivan Laptev, Angela Dai
 external_url: unfoldart
 code: 'https://github.com/aminebdj/UnfoldArt'
-paper: ''
+paper: 'https://arxiv.org/abs/2606.30608'
 webpage: 'https://aminebdj.github.io/unfoldart/'
 award: ''
 add: 'true'
